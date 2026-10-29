@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+
+    <script>
+        function checkPalindromes(words) {
+            words.forEach(function(word) {
+                const reversedWord = word.split("").reverse().join("");
+
+                if (word.toLowerCase() === reversedWord.toLowerCase()) {
+                    console.log(word + " is a palindrome.");
+                } else {
+                    console.log(word + " is not a palindrome.");
+                }
+            });
+        }
+
+        const words = ["level", "hello", "radar", "world", "madam"];
+
+        checkPalindromes(words);
+    </script>
+</body>
+</html>
